@@ -1,0 +1,110 @@
+Recreating dockercompose_analysis-rest_1
+Creating dockercompose_analysis-preprocess_1
+Creating dockercompose_analysis-database_1
+Creating dockercompose_analysis-cache_1
+Recreating dockercompose_data_management_1
+Attaching to dockercompose_analysis-preprocess_1, dockercompose_analysis-rest_1, dockercompose_analysis-cache_1, dockercompose_analysis-database_1, dockercompose_data_management_1
+analysis-cache_1       | 1:C 31 Oct 12:03:21.821 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+analysis-cache_1       |                 _._                                                  
+analysis-cache_1       |            _.-``__ ''-._                                             
+analysis-cache_1       |       _.-``    `.  `_.  ''-._           Redis 3.2.4 (00000000/0) 64 bit
+analysis-cache_1       |   .-`` .-```.  ```\/    _.,_ ''-._                                   
+analysis-cache_1       |  (    '      ,       .-`  | `,    )     Running in standalone mode
+analysis-cache_1       |  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+analysis-cache_1       |  |    `-._   `._    /     _.-'    |     PID: 1
+analysis-cache_1       |   `-._    `-._  `-./  _.-'    _.-'                                   
+analysis-cache_1       |  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+analysis-cache_1       |  |    `-._`-._        _.-'_.-'    |           http://redis.io        
+analysis-cache_1       |   `-._    `-._`-.__.-'_.-'    _.-'                                   
+analysis-cache_1       |  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+analysis-cache_1       |  |    `-._`-._        _.-'_.-'    |                                  
+analysis-cache_1       |   `-._    `-._`-.__.-'_.-'    _.-'                                   
+analysis-cache_1       |       `-._    `-.__.-'    _.-'                                       
+analysis-cache_1       |           `-._        _.-'                                           
+analysis-cache_1       |               `-.__.-'                                               
+analysis-cache_1       | 
+analysis-cache_1       | 1:M 31 Oct 12:03:21.825 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+analysis-cache_1       | 1:M 31 Oct 12:03:21.825 # Server started, Redis version 3.2.4
+analysis-cache_1       | 1:M 31 Oct 12:03:21.825 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+analysis-cache_1       | 1:M 31 Oct 12:03:21.825 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+analysis-cache_1       | 1:M 31 Oct 12:03:21.825 * The server is now ready to accept connections on port 6379
+analysis-database_1    | => Waiting for confirmation of MongoDB service startup
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] MongoDB starting : pid=6 port=27017 dbpath=/data/db master=1 64-bit host=149c5cd59dcd
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] db version v3.2.1
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] git version: a14d55980c2cdc565d4704a7e3ad37e4e535c1b2
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] modules: none
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] build environment:
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten]     distmod: ubuntu1404
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten]     distarch: x86_64
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+analysis-database_1    | 2016-10-31T12:03:21.891+0000 I CONTROL  [initandlisten] options: { master: true, net: { http: { RESTInterfaceEnabled: true, enabled: true } }, security: { authorization: "enabled" }, storage: { engine: "wiredTiger" } }
+analysis-database_1    | 2016-10-31T12:03:21.911+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] 
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] ** WARNING: The server is started with the web server interface and access control.
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] **          The web interfaces (rest, httpinterface and/or jsonp) are insecure 
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] **          and should be disabled unless required for backward compatibility.
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] 
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] 
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] 
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+analysis-database_1    | 2016-10-31T12:03:22.102+0000 I CONTROL  [initandlisten] 
+analysis-database_1    | 2016-10-31T12:03:22.103+0000 I NETWORK  [websvr] admin web console waiting for connections on port 28017
+analysis-database_1    | 2016-10-31T12:03:22.128+0000 I REPL     [initandlisten] ******
+analysis-database_1    | 2016-10-31T12:03:22.128+0000 I REPL     [initandlisten] creating replication oplog of size: 9312MB...
+analysis-database_1    | 2016-10-31T12:03:22.139+0000 I STORAGE  [initandlisten] Starting WiredTigerRecordStoreThread local.oplog.$main
+analysis-database_1    | 2016-10-31T12:03:22.139+0000 I STORAGE  [initandlisten] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+analysis-database_1    | 2016-10-31T12:03:22.139+0000 I STORAGE  [initandlisten] Scanning the oplog to determine where to place markers for truncation
+analysis-database_1    | 2016-10-31T12:03:22.218+0000 I REPL     [initandlisten] ******
+analysis-database_1    | 2016-10-31T12:03:22.218+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+analysis-database_1    | 2016-10-31T12:03:22.219+0000 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+analysis-database_1    | 2016-10-31T12:03:22.260+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+data_management_1      | npm info it worked if it ends with ok
+data_management_1      | npm info using npm@3.10.8
+data_management_1      | npm info using node@v7.0.0
+data_management_1      | npm info lifecycle rest_api@1.0.0~prestart: rest_api@1.0.0
+data_management_1      | npm info lifecycle rest_api@1.0.0~start: rest_api@1.0.0
+data_management_1      | 
+data_management_1      | > rest_api@1.0.0 start /home/mi_data_aquisition
+data_management_1      | > node server.js
+data_management_1      | 
+data_management_1      | Listening on port 3000...
+analysis-database_1    | 2016-10-31T12:03:26.959+0000 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59804 #1 (1 connection now open)
+analysis-database_1    | 2016-10-31T12:03:26.959+0000 I ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+analysis-database_1    | 2016-10-31T12:03:26.961+0000 I NETWORK  [conn1] end connection 127.0.0.1:59804 (0 connections now open)
+analysis-database_1    | => Creating an admin user with a random password in MongoDB
+analysis-database_1    | MongoDB shell version: 3.2.1
+analysis-database_1    | connecting to: admin
+analysis-database_1    | 2016-10-31T12:03:27.010+0000 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:59806 #2 (1 connection now open)
+analysis-database_1    | Successfully added user: {
+analysis-database_1    | 	"user" : "admin",
+analysis-database_1    | 	"roles" : [
+analysis-database_1    | 		{
+analysis-database_1    | 			"role" : "root",
+analysis-database_1    | 			"db" : "admin"
+analysis-database_1    | 		}
+analysis-database_1    | 	]
+analysis-database_1    | }
+analysis-database_1    | 2016-10-31T12:03:27.108+0000 I NETWORK  [conn2] end connection 127.0.0.1:59806 (0 connections now open)
+analysis-database_1    | => Done!
+analysis-database_1    | ========================================================================
+analysis-database_1    | You can now connect to this MongoDB server using:
+analysis-database_1    | 
+analysis-database_1    |     mongo admin -u admin -p Y5ZkbDHltXRz --host <host> --port <port>
+analysis-database_1    | 
+analysis-database_1    | Please remember to change the above password as soon as possible!
+analysis-database_1    | ========================================================================
+analysis-database_1    | $cmd
+analysis-preprocess_1  | 2016-10-31 12:03:52,741 [ERROR]: ServerSelectionTimeoutError('localhost:27017: [Errno 111] Connection refused',)
+analysis-rest_1        | 2016-10-31 12:03:52,772 [ERROR]: ServerSelectionTimeoutError('localhost:27017: [Errno 111] Connection refused',)
+analysis-preprocess_1  | 2016-10-31 12:04:24,897 [ERROR]: ServerSelectionTimeoutError('localhost:27017: [Errno 111] Connection refused',)
+analysis-rest_1        | 2016-10-31 12:04:24,942 [ERROR]: ServerSelectionTimeoutError('localhost:27017: [Errno 111] Connection refused',)
+analysis-preprocess_1  | 2016-10-31 12:04:57,060 [ERROR]: ServerSelectionTimeoutError('localhost:27017: [Errno 111] Connection refused',)
+analysis-rest_1        | 2016-10-31 12:04:57,099 [ERROR]: ServerSelectionTimeoutError('localhost:27017: [Errno 111] Connection refused',)
+
+

@@ -1,0 +1,33 @@
+#Datenacquise
+#data-acquisition:
+#    image: mip02/data-acquisition
+
+
+
+
+#Data management
+data_management:
+    image: mip02/data_management
+    links:
+        - analysis-rest
+
+
+
+
+#Data analysis
+analysis-rest:
+    image: mip02/analysis-rest
+
+analysis-database:
+    image: mip02/analysis-database
+
+analysis-cache:
+    image: mip02/analysis-cache
+
+analysis-preprocess:
+    image: mip02/analysis-preprocess
+    
+
+
+
+#Frontend
