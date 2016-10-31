@@ -1,6 +1,8 @@
 #Datenacquise
-#data-acquisition:
-#    image: mip02/data-acquisition
+data-acquisition:
+    env_file:
+        - docker.env
+    image: mip02/data-acquisition
 
 
 
