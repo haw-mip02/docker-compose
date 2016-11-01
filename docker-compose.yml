@@ -6,7 +6,8 @@ data-acquisition:
         ACCESS_TOKEN: "${AT}"
         ACCESS_TOKEN_SECRET: "${ATS}"
     image: mip02/data-acquisition
-
+    links:
+        - data_management
 
 
 
