@@ -22,16 +22,36 @@ data_management:
 #Data analysis
 analysis-rest:
     image: mip02/analysis-rest
+    environment:
+        MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
+    ports:
+     - "5000:5000"
+    links:
+     - analysis-database:mongodb
+     - analysis-cache:redis
 
 analysis-database:
     image: mip02/analysis-database
+    environment:
+        MONGODB_USER: "analysis"
+        MONGODB_DATABASE: "analysis"
+        MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
+    volumes:
+        - /data/db
+    ports:
+        - "27017:27017"
+        - "28017:28017"
 
 analysis-cache:
     image: mip02/analysis-cache
+    ports:
+     - "6379:6379"
 
 analysis-preprocess:
     image: mip02/analysis-preprocess
-    
+    links:
+     - analysis-database:mongodb
+
 
 
 
