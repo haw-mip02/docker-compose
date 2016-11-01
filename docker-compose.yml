@@ -1,7 +1,10 @@
 #Datenacquise
 data-acquisition:
-    env_file:
-        - docker.env
+    environment:
+        CONSUMER_KEY: "${CK}"
+        CONSUMER_SECRET: "${CS}"
+        ACCESS_TOKEN: "${AT}"
+        ACCESS_TOKEN_SECRET: "${ATS}"
     image: mip02/data-acquisition
 
 
@@ -33,3 +36,5 @@ analysis-preprocess:
 
 
 #Frontend
+frontend:
+    image: mip02/frontend
