@@ -50,6 +50,15 @@ analysis-preprocess:
     links:
      - analysis-database:mongodb
 
+#demo frontend
+analysis-query-test:
+  build: https://github.com/haw-mip02/analysis-query-test.git
+  ports:
+    - "16900:9000"
+  environment:
+    #REST_URL: "${ANALYSIS_REST_URL}"
+    REST_URL: "http://hqor.de:16500/analysis/v1.0/"
+
 #Frontend
 frontend:
     image: mip02/frontend
