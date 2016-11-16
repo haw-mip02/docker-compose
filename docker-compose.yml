@@ -5,20 +5,17 @@ data-acquisition:
         CONSUMER_SECRET: "${CS}"
         ACCESS_TOKEN: "${AT}"
         ACCESS_TOKEN_SECRET: "${ATS}"
+        DEBUGGING: "${DEBUGGING}"
+        DATABASE_REST_URL: "http://data_management"
     image: mip02/data-acquisition
     links:
         - data_management
-
-
 
 #Data management
 data_management:
     image: mip02/data_management
     links:
         - analysis-rest
-
-
-
 
 #Data analysis
 analysis-rest:
@@ -52,9 +49,6 @@ analysis-preprocess:
     image: mip02/analysis-preprocess
     links:
      - analysis-database:mongodb
-
-
-
 
 #Frontend
 frontend:
