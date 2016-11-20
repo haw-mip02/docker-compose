@@ -62,3 +62,7 @@ analysis-query-test:
 #Frontend
 frontend:
     image: mip02/frontend
+    ports:
+      - "80:80"
+    links:
+      - analysis-rest
