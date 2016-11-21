@@ -6,10 +6,10 @@ data-acquisition:
         ACCESS_TOKEN: "${AT}"
         ACCESS_TOKEN_SECRET: "${ATS}"
         DEBUGGING: "${DEBUGGING}"
-        DATABASE_REST_URL: "http://data_management"
+        DATABASE_REST_URL: "http://data-management:3000"
     image: mip02/data-acquisition
     links:
-        - data_management
+        - data_management:data-management
 
 #Data management
 data_management:
@@ -54,7 +54,7 @@ analysis-preprocess:
 analysis-query-test:
   build: https://github.com/haw-mip02/analysis-query-test.git
   ports:
-    - "16900:9000"
+    - "443:9000"
   environment:
     #REST_URL: "${ANALYSIS_REST_URL}"
     REST_URL: "http://hqor.de:16500/analysis/v1.0/"
