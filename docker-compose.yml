@@ -49,6 +49,8 @@ analysis-preprocess:
     image: mip02/analysis-preprocess
     links:
      - analysis-database:mongodb
+    environment:
+        MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
 
 #demo frontend
 analysis-query-test:
