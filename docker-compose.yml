@@ -72,4 +72,4 @@ frontend:
 watchtower:
     image: webhippie/watchtower
     volumes:
-      - /data/wt
+      - /var/run/docker.sock:/var/run/docker.sock
