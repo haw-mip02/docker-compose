@@ -56,18 +56,20 @@ analysis-preprocess:
 analysis-query-test:
   build: https://github.com/haw-mip02/analysis-query-test.git
   ports:
-    - "443:9000"
+    - "80:9000"
   environment:
     #REST_URL: "${ANALYSIS_REST_URL}"
     REST_URL: "http://hqor.de:16500/analysis/v1.0/"
+  links:
+    - analysis-rest
 
 #Frontend
-frontend:
-    image: mip02/frontend
-    ports:
-      - "80:80"
-    links:
-      - analysis-rest
+#frontend:
+#    image: mip02/frontend
+#    ports:
+#      - "80:80"
+#    links:
+#      - analysis-rest
 
 
 #Watchtower
