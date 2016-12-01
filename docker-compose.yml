@@ -16,6 +16,19 @@ data_management:
     image: mip02/data_management
     links:
         - analysis-rest
+        - data_management_db
+    environment:
+        DB_ACCESS_TOKEN: "${DBT}"
+        MONGODB_USER: "mongo"
+        MONGODB_DATABASE: "tweetdb"
+        MONGODB_PASS: ${MONGODB_PASS}
+        MONGODB_PORT_27017_TCP_ADDR: data_management_db
+        MONGODB_PORT_27017_TCP_PORT: 27017
+
+data_management_db:
+    image: mongo #tutum/mongodb:3.2
+    ports:
+        - "29017:27017"
 
 #Data analysis
 analysis-rest:
