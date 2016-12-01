@@ -20,38 +20,37 @@ docker-compose up -d
 if (test $? -ne 0)
 	then docker rm dockercompose_data-acquisition_1
 fi
-./check_docker_container.sh dockercompose_frontend_1
-if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
-
-fi
+#./check_docker_container.sh dockercompose_frontend_1
+#if (test $? -ne 0)
+#       then docker rm dockercompose_frontend_1
+#fi
 ./check_docker_container.sh dockercompose_data_management_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_data_management_1
 fi
 ./check_docker_container.sh dockercompose_analysis-rest_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_analysis-rest_1
 fi
 ./check_docker_container.sh dockercompose_analysis-preprocess_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_analysis-preprocess_1
 fi
 ./check_docker_container.sh dockercompose_analysis-database_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_analysis-database_1
 fi
 ./check_docker_container.sh dockercompose_analysis-query-test_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_analysis-query-test_1
 fi
 ./check_docker_container.sh dockercompose_watchtower_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_watchtower_1
 fi
 ./check_docker_container.sh dockercompose_analysis-cache_1
 if (test $? -ne 0)
-        then docker rm dockercompose_data-acquisition_1
+        then docker rm dockercompose_analysis-cache_1
 fi
 
 docker-compose up -d
