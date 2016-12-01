@@ -15,9 +15,6 @@ docker-compose pull
 #docker-compose up new to restart new container
 docker-compose up -d
 
-#make scripts for container checking executable
-chmod +x check_docker_container.sh slacktee.sh
-
 #checking container to be exited
 ./check_docker_container.sh dockercompose_data-acquisition_1
 ./check_docker_container.sh dockercompose_frontend_1
