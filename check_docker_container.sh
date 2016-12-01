@@ -17,7 +17,7 @@ SERVER=$(cat ../hostname.txt)
 RUNNING=$(docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
 
 if [ $? -eq 1 ]; then
-  echo "$SERVER: UNKNOWN - $CONTAINER does not exist." | ./slacktee.sh
+  echo "$SERVER: UNKNOWN - $CONTAINER does not exist." #| ./slacktee.sh
   exit 3
 fi
 
