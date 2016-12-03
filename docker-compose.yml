@@ -74,12 +74,15 @@ analysis-preprocess:
 analysis-query-test:
   build: https://github.com/haw-mip02/analysis-query-test.git
   ports:
-    - "80:9000"
+    - "80:80"
   environment:
-    #REST_URL: "${ANALYSIS_REST_URL}"
-    REST_URL: "http://hqor.de:16500/analysis/v1.0/"
+    ANALYSIS_REST_HOST: "analysis-rest"
+    ANALYSIS_REST_PORT: "5000"
+    DATA_MANAGEMENT_HOST: "data-management"
+    DATA_MANAGEMENT_PORT: "3000"
   links:
     - analysis-rest
+    - data_management:data-management
 
 #Frontend
 #frontend:
