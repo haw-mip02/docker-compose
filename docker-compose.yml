@@ -7,6 +7,7 @@ data-acquisition:
         ACCESS_TOKEN_SECRET: "${ATS}"
         DEBUGGING: "${DEBUGGING}"
         DATABASE_REST_URL: "http://data-management:3000"
+        DB_ACCESS_TOKEN: "${DB_ACCESS_TOKEN}"
     image: mip02/data-acquisition
     links:
         - data_management:data-management
