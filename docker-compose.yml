@@ -29,11 +29,15 @@ data_management:
         MONGODB_PASS: ${MONGODB_PASS}
         MONGODB_PORT_27017_TCP_ADDR: data_management_db
         MONGODB_PORT_27017_TCP_PORT: 27017
+    ports:
+     - "3000:3000"
 
 data_management_db:
     image: mongo #tutum/mongodb:3.2
     ports:
         - "29017:27017"
+    volumes:
+        - "./data_management_db:/data/db"
 
 #Data analysis
 analysis-rest:
