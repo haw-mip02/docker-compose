@@ -66,8 +66,11 @@ analysis-cache:
 analysis-preprocess:
     image: mip02/analysis-preprocess
     links:
+     - data_management:rest
      - analysis-database:mongodb
     environment:
+        REST_PORT_3000_TCP_ADDR: "rest"
+        REST_PORT_3000_TCP_PORT: "3000"
         MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
 
 #demo frontend
