@@ -8,10 +8,10 @@ data-acquisition:
         DEBUGGING: "False"
         DATABASE_REST_URL: "http://data-management:3000"
         DB_ACCESS_TOKEN: "${DB_ACCESS_TOKEN}"
-        UPPER_RIGHT_LONGITUDE: -64.973808
-        UPPER_RIGHT_LATITUDE: 49.195841
-        LOWER_LEFT_LONGITUDE: -120.856379
-        LOWER_LEFT_LATITUDE: 32.516336
+        UPPER_RIGHT_LONGITUDE: -72.476807
+        UPPER_RIGHT_LATITUDE: 41.367405
+        LOWER_LEFT_LONGITUDE: -76.096802
+        LOWER_LEFT_LATITUDE: 39.611441
     image: mip02/data-acquisition
     links:
         - data_management:data-management
