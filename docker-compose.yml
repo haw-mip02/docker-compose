@@ -23,7 +23,7 @@ data_management:
         - analysis-rest
         - data_management_db
     environment:
-        DB_ACCESS_TOKEN: "${DBT}"
+        DB_ACCESS_TOKEN: "${DB_ACCESS_TOKEN}"
         MONGODB_USER: "mongo"
         MONGODB_DATABASE: "tweetdb"
         MONGODB_PASS: ${MONGODB_PASS}
@@ -39,7 +39,7 @@ data_management_db:
 analysis-rest:
     image: mip02/analysis-rest
     environment:
-        MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
+        MONGODB_PASS: "${MONGODB_PASS}"
     ports:
      - "5000:5000"
     links:
@@ -51,7 +51,7 @@ analysis-database:
     environment:
         MONGODB_USER: "analysis"
         MONGODB_DATABASE: "analysis"
-        MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
+        MONGODB_PASS: "${MONGODB_PASS}"
     volumes:
         - /data/db
     ports:
@@ -71,7 +71,7 @@ analysis-preprocess:
     environment:
         REST_PORT_3000_TCP_ADDR: "rest"
         REST_PORT_3000_TCP_PORT: "3000"
-        MONGODB_PASS: "${ANALYSIS_MONGODB_PASS}"
+        MONGODB_PASS: "${MONGODB_PASS}"
 
 #demo frontend
 analysis-query-test:
