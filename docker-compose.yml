@@ -5,7 +5,7 @@ data-acquisition:
         CONSUMER_SECRET: "${CS}"
         ACCESS_TOKEN: "${AT}"
         ACCESS_TOKEN_SECRET: "${ATS}"
-        DEBUGGING:"False"
+        DEBUGGING: "False"
         DATABASE_REST_URL: "http://data-management:3000"
         DB_ACCESS_TOKEN: "${DB_ACCESS_TOKEN}"
         UPPER_RIGHT_LONGITUDE: -64.973808
