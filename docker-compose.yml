@@ -72,7 +72,7 @@ analysis-preprocess:
 
 #demo frontend
 analysis-query-test:
-  build: https://github.com/haw-mip02/analysis-query-test.git
+  image: mip02/analysis-query-test
   ports:
     - "80:80"
   environment:
@@ -83,15 +83,6 @@ analysis-query-test:
   links:
     - analysis-rest
     - data_management:data-management
-
-#Frontend
-#frontend:
-#    image: mip02/frontend
-#    ports:
-#      - "80:80"
-#    links:
-#      - analysis-rest
-
 
 #Watchtower
 watchtower:
