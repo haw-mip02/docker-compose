@@ -37,7 +37,7 @@ data_management_db:
     ports:
         - "29017:27017"
     volumes:
-        - "./data_management_db:/data/db"
+        - "/data/data_management_db:/data/db"
 
 #Data analysis
 analysis-rest:
