@@ -87,17 +87,17 @@ analysis-preprocess:
 #demo frontend
 analysis-query-test:
     restart: always
-  image: mip02/analysis-query-test
-  ports:
-    - "8080:80"
-  environment:
-    ANALYSIS_REST_HOST: "analysis-rest"
-    ANALYSIS_REST_PORT: "5000"
-    DATA_MANAGEMENT_HOST: "data-management"
-    DATA_MANAGEMENT_PORT: "3000"
-  links:
-    - analysis-rest
-    - data_management:data-management
+    image: mip02/analysis-query-test
+    ports:
+      - "8080:80"
+    environment:
+      ANALYSIS_REST_HOST: "analysis-rest"
+      ANALYSIS_REST_PORT: "5000"
+      DATA_MANAGEMENT_HOST: "data-management"
+      DATA_MANAGEMENT_PORT: "3000"
+    links:
+      - analysis-rest
+      - data_management:data-management
 
 #Watchtower
 watchtower:
