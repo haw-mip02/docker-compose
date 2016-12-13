@@ -100,8 +100,16 @@ analysis-query-test:
       - data_management:data-management
 
 #Watchtower
-watchtower:
+#watchtower:
+    #restart: always
+    #image: webhippie/watchtower
+    #volumes:
+    #  - /var/run/docker.sock:/var/run/docker.sock
+
+
+#Rancher
+rancher:
     restart: always
-    image: webhippie/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    image: rancher/server
+    ports:
+      - "8090:8090"
