@@ -112,4 +112,4 @@ rancher:
     restart: always
     image: rancher/server
     ports:
-      - "8090:8080"
+      - "8090:8090"
