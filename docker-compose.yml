@@ -62,7 +62,7 @@ analysis-database:
         MONGODB_DATABASE: "analysis"
         MONGODB_PASS: "${MONGODB_PASS}"
     volumes:
-        - "/data/analysis_database:/data/db"
+        - "/data/analysis_database/db:/data/db"
     ports:
         - "27017:27017"
         - "28017:28017"
