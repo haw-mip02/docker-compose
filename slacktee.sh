@@ -4,12 +4,12 @@
 # Default Configuration
 # ----------
 webhook_url="https://hooks.slack.com/services/******"       # Incoming Webhooks integration URL
-upload_token="******"      # The user's API authentication token, only used for file uploads
-channel="******"    # Default channel to post messages. '#' is prepended, if it doesn't start with '#' or '@'.
-tmp_dir="/tmp"       # Temporary file is created in this directory.
-username="******"  # Default username to post messages.
-icon=":ghost:"         # Default emoji to post messages. Don't wrap it with ':'. See http://www.emoji-cheat-sheet.com; can be a url too.
-attachment=""        # Default color of the attachments. If an empty string is specified, the attachments are not used.
+upload_token="******"       # The user's API authentication token, only used for file uploads
+channel="******"            # Default channel to post messages. '#' is prepended, if it doesn't start with '#' or '@'.
+tmp_dir="/tmp"              # Temporary file is created in this directory.
+username="******"           # Default username to post messages.
+icon=":ghost:"              # Default emoji to post messages. Don't wrap it with ':'. See http://www.emoji-cheat-sheet.com; can be a url too.
+attachment=""               # Default color of the attachments. If an empty string is specified, the attachments are not used.
 
 # ----------
 # Initialization
